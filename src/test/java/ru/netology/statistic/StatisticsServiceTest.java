@@ -19,22 +19,11 @@ class StatisticsServiceTest {
     }
 
     @Test
-    void findMaxSeriatim() {
+    void findMaxInSeries() {
         StatisticsService service = new StatisticsService();
 
         long[] incomesInBillions = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
         long expected = 11;
-        long actual = service.findMax(incomesInBillions);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findMaxZero() {
-        StatisticsService service = new StatisticsService();
-
-        long[] incomesInBillions = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        long expected = 0;
         long actual = service.findMax(incomesInBillions);
 
         assertEquals(expected, actual);
